@@ -1,9 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+
+using VehicleConsole.API.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container
 builder.Services.AddControllers(); // Controller'ları etkinleştir
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi(); // .NET 10'da Swagger yerine OpenAPI
+
+// Database bağlantısı ekle
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 // CORS ekle (React için)
 builder.Services.AddCors(options =>
