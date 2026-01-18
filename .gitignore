@@ -1,13 +1,25 @@
-# .NET
-backend/bin/
-backend/obj/
-backend/*.user
-backend/.vs/
+# .NET Build Outputs
+**/bin/
+**/obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.deps.json
+*.runtimeconfig.json
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
 
 # React
-frontend/node_modules/
-frontend/build/
-frontend/.env.local
+node_modules/
+dist/
+build/
+.env.local
+.env
 
 # Database
 *.db
@@ -18,3 +30,8 @@ frontend/.env.local
 .vscode/
 .idea/
 *.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
