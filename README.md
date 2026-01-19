@@ -2,7 +2,7 @@
 
 ## Teknolojiler
 - Frontend: React
-- Backend: .NET Core 8 Web API
+- Backend: .NET Core 10 Web API
 - Database: PostgreSQL 17
 
 ## Kurulum
