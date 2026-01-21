@@ -10,3 +10,25 @@ body {
 * {
   box-sizing: border-box;
 }
+
+/* Leaflet harita container */
+.leaflet-container {
+  background: #1a1a1a;
+  font-family: inherit;
+}
+
+/* Leaflet popup */
+.leaflet-popup-content-wrapper {
+  background: #2a2a2a;
+  color: white;
+  border-radius: 8px;
+}
+
+.leaflet-popup-tip {
+  background: #2a2a2a;
+}
+
+/* Leaflet zoom buttons (gizle, custom kullanacağız) */
+.leaflet-control-zoom {
+  display: none;
+}

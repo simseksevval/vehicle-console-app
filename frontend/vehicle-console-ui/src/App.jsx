@@ -1,10 +1,16 @@
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import SettingsPage from './pages/SettingsPage';
+import MapPage from './pages/MapPage';
+
 function App() {
   return (
-    <div className="min-h-screen bg-vehicle-dark text-white flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-vehicle-blue">
-        Tailwind Çalışıyor! ✅
-      </h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Navigate to="/settings" replace />} />
+        <Route path="/settings" element={<SettingsPage />} />
+        <Route path="/map" element={<MapPage />} />
+      </Routes>
+    </Router>
   );
 }
 
