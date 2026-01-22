@@ -121,12 +121,20 @@ Password: postgres
 
 ### 3. Backend Kurulumu
 ```bash
-cd backend/VehicleConsole.API
-
-# Veritabanını oluşturma ve seed data'yı yükleme
 dotnet ef database update
+```
+Bu komut tabloları oluşturur ve seed data'yı otomatik yükler.
 
-# API'yi başlat
+#### Manuel Kurulum (Opsiyonel)
+Eğer hazır veritabanı yedeğini kullanmak isterseniz:
+```bash
+# PostgreSQL container'ı çalıştırın
+docker-compose up -d
+
+# Backup'ı import edin
+docker exec -i vehicle-console-db psql -U postgres -d vehicle_console < vehicle_console_backup.sql
+
+# API'yi başlatma
 dotnet run
 ```
 
