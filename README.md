@@ -1,6 +1,6 @@
 # Vehicle Console - Araç Orta Konsol Arayüzü
 
-Araç içi dokunmatik ekran yazılımı prototipi. React frontend ve .NET Core backend ile geliştirilmiş, far kontrolü, sis farı ayarları ve GPS tabanlı navigasyon özelliklerini içeren full-stack web uygulaması.
+Araç içi dokunmatik ekran yazılımı prototipi. React frontend ve .NET Core backend ile geliştirilmiş, far kontrolü, sis farı ayarları ve navigasyon özelliklerini içeren full-stack web uygulaması.
 
 ## 🚀 Özellikler
 
@@ -90,6 +90,11 @@ vehicle-console-app/
 
 ## 📥 Kurulum ve Çalıştırma
 
+### Port'lar
+- Backend: `5004`
+- Frontend: `5173`
+- PostgreSQL: `5432`
+
 ### 1. Projeyi İndirin
 ```bash
 git clone <repository-url>
@@ -103,6 +108,15 @@ docker-compose up -d
 
 # Kontrol etme (vehicle-console-db çalışıyor olmalı)
 docker ps
+```
+
+#### pgAdmin ile Veritabanına Bağlanma
+```
+Host: localhost
+Port: 5432
+Database: vehicle_console
+Username: postgres
+Password: postgres
 ```
 
 ### 3. Backend Kurulumu
@@ -240,22 +254,3 @@ GET  /api/routes/{id}     # ID'ye göre rota getir
   ]
 }
 ```
-
-## 🧪 Test
-
-
-### pgAdmin ile Veritabanına Bağlanma
-```
-Host: localhost
-Port: 5432
-Database: vehicle_console
-Username: postgres
-Password: postgres
-```
-
-## 📝 Geliştirme Notları
-
-### Port'lar
-- Backend: `5004`
-- Frontend: `5173`
-- PostgreSQL: `5432`

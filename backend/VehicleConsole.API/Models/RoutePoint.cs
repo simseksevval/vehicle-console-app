@@ -4,7 +4,7 @@ public class RoutePoint
 {
     public int Id { get; set; }
     
-    public int RouteId { get; set; }  // Foreign Key
+    public int RouteId { get; set; }
     
     public double Latitude { get; set; }
     
